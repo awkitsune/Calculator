@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editTextNumberFirst"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint="@string/enter_first_number_hint"
+        android:inputType="numberSigned|number|numberDecimal"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextNumberSecond"
+        app:layout_constraintEnd_toStartOf="@+id/buttonClearFirst"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextNumberSecond"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint="@string/enter_second_number_hint"
+        android:inputType="numberSigned|number|numberDecimal"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextNumberResult"
+        app:layout_constraintEnd_toStartOf="@+id/buttonClearSecond"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonClearFirst"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:onClick="clearFirstClick"
+        android:text="@string/clear_button"
+        app:icon="@drawable/ic_baseline_delete_outline_24"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextNumberFirst"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editTextNumberFirst" />
+
+    <Button
+        android:id="@+id/buttonClearSecond"
+        android:layout_width="114dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:onClick="clearSecondClick"
+        android:text="@string/clear_button"
+        app:icon="@drawable/ic_baseline_delete_outline_24"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextNumberSecond"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editTextNumberSecond" />
+
+    <EditText
+        android:id="@+id/editTextNumberResult"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:editable="false"
+        android:ems="10"
+        android:hint="@string/result_hint"
+        android:minHeight="48dp"
+        android:textIsSelectable="true"
+        app:layout_constraintBottom_toTopOf="@+id/buttonCopyToFirst"
+        app:layout_constraintEnd_toStartOf="@+id/buttonClearResult"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonClearResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:onClick="clearResultClick"
+        android:text="@string/clear_button"
+        app:icon="@drawable/ic_baseline_delete_outline_24"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextNumberResult"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editTextNumberResult" />
+
+    <Button
+        android:id="@+id/buttonCopyToFirst"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="copyToFirstClick"
+        android:text="@string/copy_result_to_first_button"
+        app:icon="@drawable/ic_baseline_arrow_upward_24"
+        app:layout_constraintBottom_toTopOf="@+id/buttonClearAll"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonClearAll"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="clearAllClick"
+        android:text="@string/clear_all_button"
+        app:icon="@drawable/ic_baseline_delete_outline_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonDivide" />
+
+    <Button
+        android:id="@+id/buttonAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:contentDescription="@string/add_desc"
+        android:minWidth="48dip"
+        android:onClick="addClick"
+        android:text="@string/add_string"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonClearAll"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/buttonClearAll" />
+
+    <Button
+        android:id="@+id/buttonSubstract"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:contentDescription="@string/substract_desc"
+        android:minWidth="48dip"
+        android:onClick="substractClick"
+        android:text="@string/substract_string"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonAdd"
+        app:layout_constraintStart_toEndOf="@+id/buttonAdd"
+        app:layout_constraintTop_toTopOf="@+id/buttonAdd" />
+
+    <Button
+        android:id="@+id/buttonMultiply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:contentDescription="@string/multiply_desc"
+        android:minWidth="48dip"
+        android:onClick="multiplyClick"
+        android:text="@string/multiply_string"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonSubstract"
+        app:layout_constraintStart_toEndOf="@+id/buttonSubstract"
+        app:layout_constraintTop_toTopOf="@+id/buttonSubstract" />
+
+    <Button
+        android:id="@+id/buttonDivide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:contentDescription="@string/divide_desc"
+        android:minWidth="48dip"
+        android:onClick="divideClick"
+        android:text="@string/divide_string"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonMultiply"
+        app:layout_constraintStart_toEndOf="@+id/buttonMultiply"
+        app:layout_constraintTop_toTopOf="@+id/buttonMultiply" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

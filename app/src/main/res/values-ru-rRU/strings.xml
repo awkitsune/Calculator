@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Калькулятор</string>
+    <string name="click_me">Жмякни меня!</string>
+    <string name="enter_first_number_hint">Первое число</string>
+    <string name="enter_second_number_hint">Второе число</string>
+    <string name="clear_button">Очистить</string>
+    <string name="result_hint">Результат</string>
+    <string name="copy_result_to_first_button">Скопировать результат в первое</string>
+    <string name="clear_all_button">Очистить всё</string>
+    <string name="calculate_desc">Вычислить</string>
+    <string name="divide_desc">Разделить</string>
+    <string name="multiply_desc">Умножить</string>
+    <string name="substract_desc">Вычесть</string>
+    <string name="add_desc">Сложить</string>
+    <string name="error_empty_input">Входные поля не должны быть пустыми</string>
+</resources>

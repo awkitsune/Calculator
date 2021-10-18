@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Calculator</string>
+    <string name="click_me">Click me!</string>
+    <string name="enter_first_number_hint">First number</string>
+    <string name="enter_second_number_hint">Second number</string>
+    <string name="clear_button">Clear</string>
+    <string name="result_hint">Result</string>
+    <string name="copy_result_to_first_button">Copy result to first</string>
+    <string name="clear_all_button">Clear All</string>
+    <string name="calculate_desc">Calculate</string>
+    <string name="divide_desc">Divide</string>
+    <string name="multiply_desc">Multiply</string>
+    <string name="substract_desc">Substract</string>
+    <string name="add_desc">Add</string>
+    <string name="add_string" translatable="false">+</string>
+    <string name="substract_string" translatable="false">-</string>
+    <string name="multiply_string" translatable="false">*</string>
+    <string name="divide_string" translatable="false">/</string>
+    <string name="error_empty_input">Input fields shouldn\'t be empty</string>
+</resources>
